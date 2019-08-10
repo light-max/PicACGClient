@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:padding="40dp">
+
+    <EditText android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:hint="账号"
+              android:id="@+id/name"
+              android:inputType="textPersonName"/>
+
+    <EditText android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:id="@+id/password"
+              android:hint="密码"
+              android:inputType="textPassword"/>
+
+    <FrameLayout android:layout_width="match_parent"
+                 android:layout_height="wrap_content">
+
+        <CheckBox android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:hint="自动登录"
+                  android:textColorHint="@color/colorPrimary"
+                  android:buttonTint="@color/colorPrimary"
+                  android:id="@+id/checkbox"/>
+
+        <TextView android:id="@+id/switched"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_gravity="right"
+                  android:text="@string/jump_to_signup"
+                  android:padding="8dp"/>
+
+    </FrameLayout>
+
+    <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/post"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="登录"
+            android:textColor="@android:color/white"/>
+
+</LinearLayout>

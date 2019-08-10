@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <LinearLayout android:layout_width="match_parent" android:orientation="horizontal"
+                  android:layout_height="wrap_content" android:background="@color/colorPrimary">
+
+        <ImageView android:id="@+id/back" android:padding="16dp" android:layout_width="56dp"
+                   android:layout_height="56dp"
+                   android:src="@drawable/ic_back" android:layout_margin="2dp"/>
+
+        <EditText android:id="@+id/content" android:layout_gravity="center" android:layout_width="0dp"
+                  android:layout_height="wrap_content"
+                  android:layout_weight="1" android:background="#00000000" android:hint="搜索..."
+                  android:textColorHint="#DDD" android:textColor="@android:color/white"
+                  android:imeOptions="actionSearch" android:inputType="text" android:singleLine="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/layout" android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:orientation="vertical" android:visibility="gone">
+
+        <com.google.android.material.tabs.TabLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/MyTablayoutstyle"/>
+
+        <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+</LinearLayout>

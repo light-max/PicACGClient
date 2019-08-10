@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="4dp"
+        android:background="@android:color/white">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:orientation="horizontal"
+                  android:padding="1dp">
+
+        <androidx.cardview.widget.CardView
+                app:cardCornerRadius="4dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <ImageView android:layout_width="120dp" android:layout_height="120dp" android:src="@drawable/ic_image"
+                       android:id="@+id/icon" android:scaleType="centerCrop"
+                       android:adjustViewBounds="true"/>
+
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent"
+                      android:layout_marginLeft="8dp" android:orientation="vertical"
+                      android:padding="8dp">
+
+            <TextView android:id="@+id/title" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                      android:textColor="@android:color/background_dark" tools:text="title" android:textSize="20dp"/>
+
+            <View android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+            <TextView android:id="@+id/time" android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" tools:text="time"
+                      android:singleLine="true"/>
+
+            <View android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                          android:orientation="horizontal"
+                          android:layout_gravity="bottom">
+
+                <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                           android:src="@drawable/ic_image"/>
+
+                <TextView android:id="@+id/number" android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          tools:text="12"
+                          android:layout_marginLeft="4dp"
+                          android:singleLine="true"/>
+
+                <ImageView android:layout_marginLeft="16dp" android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/ic_watch"/>
+
+                <TextView android:id="@+id/watch" android:layout_marginLeft="4dp"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content" tools:text="1345"
+                          android:singleLine="true"/>
+
+
+                <ImageView android:layout_marginLeft="16dp" android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/ic_star"
+                           android:id="@+id/star_bt"/>
+
+                <TextView android:id="@+id/star" android:layout_marginLeft="4dp" tools:text="999"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:singleLine="true"/>
+
+                <View android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+
+                <ImageView tools:visibility="visible" android:visibility="gone" android:id="@+id/more"
+                           android:layout_width="wrap_content"
+                           android:layout_height="wrap_content"
+                           android:src="@drawable/ic_more"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

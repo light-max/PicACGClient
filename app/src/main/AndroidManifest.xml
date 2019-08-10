@@ -1,21 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.lfq.picacg">
+          package="com.lfq.picacg">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
 
     <application
-        android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+            android:name=".MyApplication"
+            android:allowBackup="true"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/app_name"
+            android:roundIcon="@mipmap/ic_launcher_round"
+            android:supportsRtl="true"
+            android:theme="@style/AppTheme">
         <activity android:name=".MainActivity">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.MAIN"/>
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".view.login.LoginActivity"/>
+        <activity android:name=".view.home.HomeActivity"/>
+        <activity android:name=".view.info.UserInfoActivity"/>
+        <activity android:name=".view.NameSetActivity"/>
+        <activity android:name=".view.PasswordSetActivity"/>
+        <activity android:name=".view.submission.SubmissionActivity"/>
+        <activity android:name=".view.ImageBrowse"/>
+        <activity android:name=".view.atlasdetails.AtlasDetailsActivity"/>
+        <activity android:name=".view.info.AuthorInfoActivity"/>
+        <activity android:name=".view.cropimage.CropImageActivity"/>
+        <!--图片剪裁的activity-->
+        <activity android:name="com.soundcloud.android.crop.CropImageActivity"/>
+        <activity android:name=".view.UpdateSubmission"/>
+        <activity android:name=".view.search.SearchActivity"/>
     </application>
 
 </manifest>

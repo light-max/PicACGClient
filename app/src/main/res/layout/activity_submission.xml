@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back"
+            android:id="@+id/toolbar"
+            app:titleTextColor="@color/colorTitleColor"
+            android:background="@color/colorPrimary"
+            app:title="投稿"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/images"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+    <LinearLayout android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:orientation="vertical"
+                  android:padding="12dp">
+
+        <EditText android:id="@+id/title" android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:hint="标题"/>
+
+        <EditText android:id="@+id/keyword" android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:hint="搜索关键词"/>
+
+        <EditText android:id="@+id/introduction" android:layout_width="match_parent"
+                  android:layout_height="wrap_content" android:hint="简介"/>
+
+        <Button android:id="@+id/post" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary" android:text="提交"
+                android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+</LinearLayout>

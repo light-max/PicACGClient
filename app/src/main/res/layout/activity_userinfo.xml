@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_back"
+            android:id="@+id/toolbar"
+            app:titleTextColor="@color/colorTitleColor"
+            android:background="@color/colorPrimary"
+            app:title="个人资料"
+            android:theme="@style/ActionMenu"/>
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <FrameLayout android:layout_width="match_parent"
+                     android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/header"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@drawable/ic_person_outline_black_24dp"
+                    android:tint="@color/colorPrimary"/>
+
+            <Button android:textColor="@android:color/white"
+                    android:text="注销"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:layout_gravity="right"
+                    android:id="@+id/sign_out"/>
+
+        </FrameLayout>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="昵称"
+                android:inputType="textPersonName"
+                android:id="@+id/nickname"/>
+
+        <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="个人简介"
+                android:lines="3"
+                android:id="@+id/word"/>
+
+        <RadioGroup
+                android:id="@+id/radioGroup_gender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left"
+                android:padding="8dp">
+
+            <TextView
+                    android:text="性别"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            <RadioButton
+                    android:id="@+id/male"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="true"
+                    android:text="男"
+                    android:layout_marginLeft="8dp"/>
+
+            <RadioButton
+                    android:id="@+id/female"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="女"
+                    android:layout_marginLeft="8dp"/>
+
+            <RadioButton
+                    android:id="@+id/unknown"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="保密"
+                    android:layout_marginLeft="8dp"/>
+
+            <View android:layout_width="0dp"
+                  android:layout_height="1dp"
+                  android:layout_weight="1"/>
+
+            <CheckBox android:hint="记住密码"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:id="@+id/checkbox"/>
+
+        </RadioGroup>
+
+        <Button android:textColor="@android:color/white"
+                android:text="保存"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorPrimary"
+                android:id="@+id/save"/>
+
+    </LinearLayout>
+
+</LinearLayout>
