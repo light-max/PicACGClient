@@ -6,7 +6,7 @@ import com.lfq.picacg.MyApplication
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-const val serverurl: String = "http://10.0.2.2:8080/"
+const val serverurl: String = "http://192.168.0.108:8080/"
 const val head_source_url = serverurl + "image/source/head/"
 const val head_small_url = serverurl + "image/small/head/"
 
